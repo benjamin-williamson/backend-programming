@@ -1,10 +1,14 @@
 package com.example.demo.services;
 
-import lombok.Data;
-import lombok.NonNull;
-
-@Data
 public class PurchaseResponse {
-    @NonNull
+
     private final String orderTrackingNumber;
+
+    public PurchaseResponse(String orderTrackingNumber) {
+        this.orderTrackingNumber = orderTrackingNumber;
+    }
+
+    public String getOrderTrackingNumber() {
+        return orderTrackingNumber;
+    }
 }

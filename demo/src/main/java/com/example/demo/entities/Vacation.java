@@ -1,14 +1,16 @@
 package com.example.demo.entities;
 
 import jakarta.persistence.*;
-import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 import java.math.BigDecimal;
 import java.util.Date;
 import java.util.Set;
 
 @Entity
 @Table(name = "vacations")
-@Data
+@Getter
+@Setter
 public class Vacation {
 
     @Id
@@ -23,7 +25,7 @@ public class Vacation {
     private String description;
 
     @Column(name = "travel_fare_price")
-    private BigDecimal travel_price;
+    private BigDecimal travel_fare_price;
 
     @Column(name = "image_url")
     private String image_URL;
