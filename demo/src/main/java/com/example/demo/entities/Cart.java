@@ -1,7 +1,8 @@
 package com.example.demo.entities;
 
 import jakarta.persistence.*;
-import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 import java.math.BigDecimal;
 import java.util.Date;
 import java.util.HashSet;
@@ -9,7 +10,8 @@ import java.util.Set;
 
 @Entity
 @Table(name = "carts")
-@Data
+@Getter
+@Setter
 public class Cart {
 
     @Id
@@ -51,13 +53,5 @@ public class Cart {
             cartItem.add(item);
             item.setCart(this);
         }
-    }
-
-    public Customer getCustomer() {
-        return customer;
-    }
-
-    public void setCustomer(Customer customer) {
-        this.customer = customer;
     }
 }

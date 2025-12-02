@@ -1,13 +1,15 @@
 package com.example.demo.entities;
 
 import jakarta.persistence.*;
-import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 import java.util.Date;
 import java.util.Set;
 
 @Entity
 @Table(name = "cart_items")
-@Data
+@Getter
+@Setter
 public class CartItem {
 
     @Id
@@ -34,12 +36,4 @@ public class CartItem {
     @ManyToOne
     @JoinColumn(name = "cart_id")
     private Cart cart;
-
-    public Cart getCart() {
-        return cart;
-    }
-
-    public void setCart(Cart cart) {
-        this.cart = cart;
-    }
 }
