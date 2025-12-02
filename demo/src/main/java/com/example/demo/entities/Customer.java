@@ -18,10 +18,12 @@ public class Customer {
     @Column(name = "customer_id")
     private Long id;
 
-    @Column(name = "first_name", nullable = false)
+    // FIX: Map to 'customer_first_name' to match the database
+    @Column(name = "customer_first_name", nullable = false)
     private String firstName;
 
-    @Column(name = "last_name", nullable = false)
+    // FIX: Map to 'customer_last_name' to match the database
+    @Column(name = "customer_last_name", nullable = false)
     private String lastName;
 
     @Column(name = "address", nullable = false)
