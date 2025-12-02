@@ -4,6 +4,7 @@ import com.example.demo.services.CheckoutService;
 import com.example.demo.services.Purchase;
 import com.example.demo.services.PurchaseResponse;
 import org.springframework.web.bind.annotation.*;
+import jakarta.validation.Valid;
 
 @CrossOrigin("http://localhost:4200")
 @RestController
@@ -17,7 +18,7 @@ public class CheckoutController {
     }
 
     @PostMapping("/purchase")
-    public PurchaseResponse placeOrder(@RequestBody Purchase purchase) {
+    public PurchaseResponse placeOrder(@Valid @RequestBody Purchase purchase) {
         PurchaseResponse purchaseResponse = checkoutService.placeOrder(purchase);
         return purchaseResponse;
     }
