@@ -24,6 +24,8 @@ public class Vacation {
     @Column(name = "description")
     private String description;
 
+    // FIX: Variable name must be 'travel_price' to match Frontend
+    // The @Column name 'travel_fare_price' maps it to the DB correctly
     @Column(name = "travel_fare_price")
     private BigDecimal travel_price;
 
