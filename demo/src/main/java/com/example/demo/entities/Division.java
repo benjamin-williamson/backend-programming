@@ -1,13 +1,15 @@
 package com.example.demo.entities;
 
 import jakarta.persistence.*;
-import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 import java.util.Date;
 import java.util.Set;
 
 @Entity
 @Table(name = "divisions")
-@Data
+@Getter
+@Setter
 public class Division {
 
     @Id
