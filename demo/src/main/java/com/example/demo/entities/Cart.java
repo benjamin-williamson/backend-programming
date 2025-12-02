@@ -52,4 +52,12 @@ public class Cart {
             item.setCart(this);
         }
     }
+
+    public Customer getCustomer() {
+        return customer;
+    }
+
+    public void setCustomer(Customer customer) {
+        this.customer = customer;
+    }
 }
