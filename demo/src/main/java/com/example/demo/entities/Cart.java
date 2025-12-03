@@ -51,9 +51,9 @@ public class Cart {
         }
     }
 
-    // ===============================
-    // MANUAL GETTERS AND SETTERS
-    // ===============================
+    // ==========================================
+    // MANUAL METHODS (REQUIRED TO FIX ERROR)
+    // ==========================================
 
     public Long getId() {
         return id;
