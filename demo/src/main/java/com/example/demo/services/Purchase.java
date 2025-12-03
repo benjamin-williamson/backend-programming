@@ -17,7 +17,7 @@ public class Purchase {
     @NotNull
     private Set<CartItem> cartItems;
 
-    // Manual Getters/Setters (Keep these since Lombok is failing)
+    // Manual Getters/Setters (Keep these!)
     public Customer getCustomer() { return customer; }
     public void setCustomer(Customer customer) { this.customer = customer; }
     public Cart getCart() { return cart; }

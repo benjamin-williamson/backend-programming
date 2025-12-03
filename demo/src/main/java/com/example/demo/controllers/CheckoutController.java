@@ -18,7 +18,7 @@ public class CheckoutController {
     }
 
     @PostMapping("/purchase")
-    // Added @Valid annotation below
+    // Added @Valid below
     public PurchaseResponse placeOrder(@Valid @RequestBody Purchase purchase) {
         PurchaseResponse purchaseResponse = checkoutService.placeOrder(purchase);
         return purchaseResponse;
